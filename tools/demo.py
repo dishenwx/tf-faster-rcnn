@@ -129,8 +129,7 @@ if __name__ == '__main__':
 
 
     if not os.path.isfile(tfmodel + '.meta'):
-        raise IOError(('{:s} not found.\nDid you download the proper networks from '
-                       'our server and place them properly?').format(tfmodel + '.meta'))
+        raise IOError(('{:s} not found.\nDid you download the proper networks from our server and place them properly?').format(tfmodel + '.meta'))
 
     # set config 配置参数
     tfconfig = tf.ConfigProto(allow_soft_placement=True) #TF自动选择设备运行
