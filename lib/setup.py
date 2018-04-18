@@ -58,7 +58,7 @@ def find_in_path(name, path):
 try:
     numpy_include = np.get_include()
 except AttributeError:
-    numpy_include = np.get_numpy_include()
+    numpy_include = np.get_numpy_include() # pylint: disable=maybe-no-member
 
 def customize_compiler_for_nvcc(self):
     """inject deep into distutils to customize how the dispatch
